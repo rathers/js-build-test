@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.eriwen:gradle-js-plugin:1.5.0'
+    }
+}
+// Invoke the plugin
+apply plugin: 'js'
+
+// Declare your sources
+javascript.source {
+    dev {
+        js {
+            srcDir jsSrcDir
+            include "*.js"
+            exclude "*.min.js"
+        }
+    }
+    prod {
+        js {
+            srcDir jsSrcDir
+            include "*.min.js"
+        }
+    }
+}
