@@ -25,3 +25,7 @@ javascript.source {
         }
     }
 }
+combineJs {
+    source = javascript.source.dev.js.files
+    dest = file("${buildDir}/all.js")
+}
