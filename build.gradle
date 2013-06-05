@@ -7,13 +7,15 @@ buildscript {
     }
 }
 // Invoke the plugin
+apply plugin: 'java'
 apply plugin: 'js'
 
 // Declare your sources
 javascript.source {
     dev {
         js {
-            srcDir jsSrcDir
+            //srcDir jsSrcDir
+            srcDir "${projectDir}/js"
             include "*.js"
             exclude "*.min.js"
         }
@@ -29,3 +31,25 @@ combineJs {
     source = javascript.source.dev.js.files
     dest = file("${buildDir}/all.js")
 }
+minifyJs {
+    source = combineJs
+    dest = file("${buildDir}/all-min.js")
+    closure {
+        warningLevel = 'QUIET'
+    }
+}
+task tarball(type: Tar, dependsOn: minifyJs) {
+    baseName = 'game'
+    version = "${version}"
+    doLast {
+        println "${distsDir}"
+    }
+
+    from projectDir
+    exclude 'build'
+    exclude '.git'
+    exclude '.gradle'
+    exclude 'build.gradle'
+    exclude '*.swp'
+}
+
