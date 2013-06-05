@@ -51,5 +51,7 @@ task tarball(type: Tar, dependsOn: minifyJs) {
     exclude '.gradle'
     exclude 'build.gradle'
     exclude '*.swp'
+    exclude 'caches'
+    exclude 'native'
 }
 
