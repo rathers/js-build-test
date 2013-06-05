@@ -40,9 +40,9 @@ minifyJs {
 }
 task tarball(type: Tar, dependsOn: minifyJs) {
     baseName = 'game'
-    version = "${version}"
+    version = "${BUILD_NUMBER}"
     doLast {
-        println "${distsDir}"
+        println "created tarball ${archivePath}"
     }
 
     from projectDir
