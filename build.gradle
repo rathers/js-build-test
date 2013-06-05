@@ -40,7 +40,7 @@ minifyJs {
 }
 task tarball(type: Tar, dependsOn: minifyJs) {
     baseName = 'game'
-    version = "${BUILD_NUMBER}"
+    version = "$System.env.BUILD_NUMBER"
     doLast {
         println "created tarball ${archivePath}"
     }
