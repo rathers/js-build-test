@@ -40,7 +40,10 @@ minifyJs {
 }
 task tarball(type: Tar, dependsOn: minifyJs) {
     baseName = 'game'
+    appendix = "release"
+    compression = Compression.GZIP
     version = "$System.env.BUILD_NUMBER"
+    extension = "tar.gz"
     doLast {
         println "created tarball ${archivePath}"
     }
