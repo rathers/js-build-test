@@ -1,0 +1,39 @@
+{
+    "connection":{ 
+        "access_key":"3108C9F394D765A80325E040D2C070F764E2E55F",
+        "secret_key":"0080355EF5BCD22B5BEA7DCE1F1F5AC5421A9237",
+        "server":"api.jscrambler.com",
+        "port":"443"
+    },
+    
+    "files":{
+	"1":"test.js"
+    },
+    
+    "parameters-all":{
+        "constant_folding":"%DEFAULT%",
+        "dead_code":"%DEFAULT%",
+        "dictionary_compression":"%DEFAULT%",
+        "dot_notation_elimination":"%DEFAULT%",
+	    "function_outlining":"%DEFAULT%",
+	    "function_reorder":"%DEFAULT%",
+        "literal_hooking":"%DEFAULT%",
+        "member_enumeration":"%DEFAULT%",
+        "rename_all":"%DEFAULT%",
+        "string_splitting":"%DEFAULT%",
+        "whitespace":"%DEFAULT%"
+    },
+    "parameters":{
+        "constant_folding":"%DEFAULT%",
+        "dead_code":"%DEFAULT%",
+        "dictionary_compression":"%DEFAULT%",
+        "dot_notation_elimination":"%DEFAULT%",
+	    "function_outlining":"%DEFAULT%",
+	    "function_reorder":"%DEFAULT%",
+        "literal_hooking":"%DEFAULT%",
+        "member_enumeration":"%DEFAULT%",
+        "rename_all":"%DEFAULT%",
+        "string_splitting":"%DEFAULT%",
+        "whitespace":"%DEFAULT%"
+    }
+}
